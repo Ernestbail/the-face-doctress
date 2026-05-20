@@ -110,6 +110,12 @@ h4 {
     color: gold;
 }
 
+.special {
+    color: gold;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 /* GALLERY */
 .gallery-grid {
     display: grid;
@@ -123,21 +129,29 @@ h4 {
     border: 1px solid gold;
 }
 
-/* POLICY GRID (RESTORED STYLE) */
+/* POLICY CARDS (FIXED SEPARATE BOX STYLE) */
 .policy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .policy-card {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid gold;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,215,0,0.4);
+    transition: 0.3s ease;
 }
 
-/* HOURS + BOOKING BOX */
+.policy-card:hover {
+    transform: translateY(-5px);
+    border-color: gold;
+}
+
+/* BOXES */
 .hours-box,
 .booking-box,
 .contact-box {
