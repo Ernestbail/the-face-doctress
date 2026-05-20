@@ -123,7 +123,7 @@ h4 {
     border: 1px solid gold;
 }
 
-/* POLICY */
+/* POLICY GRID (RESTORED STYLE) */
 .policy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -137,6 +137,18 @@ h4 {
     border: 1px solid gold;
 }
 
+/* HOURS + BOOKING BOX */
+.hours-box,
+.booking-box,
+.contact-box {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid gold;
+    max-width: 600px;
+    margin: auto;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -144,8 +156,7 @@ footer {
     border-top: 1px solid gold;
 }
 
-.footer-message h3 {
+footer h3 {
     color: gold;
     font-family: 'Cinzel', serif;
-    font-size: 28px;
 }
