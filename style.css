@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
 /* BODY */
 body {
     font-family: 'Poppins', sans-serif;
@@ -13,21 +18,17 @@ body {
     line-height: 1.6;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* HEADER */
 header {
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     padding: 20px 50px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,215,0,0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
     display: flex;
     justify-content: space-between;
@@ -40,6 +41,7 @@ nav {
     font-family: 'Cinzel', serif;
     font-size: 28px;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* NAV LINKS */
@@ -47,6 +49,12 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 8px 0;
 }
 
 nav a {
@@ -59,7 +67,7 @@ nav a:hover {
     color: gold;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
     min-height: 100vh;
     background: linear-gradient(to bottom, #000, #111);
@@ -85,14 +93,19 @@ nav a:hover {
     max-width: 100%;
     border-radius: 20px;
     border: 3px solid gold;
-    box-shadow: 0 0 40px rgba(255,215,0,0.25);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
+}
+
+/* OVERLAY */
+.overlay {
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
 }
 
 /* HERO TEXT */
-.overlay {
-    max-width: 500px;
-}
-
 .hero h2 {
     font-size: 60px;
     color: gold;
@@ -105,7 +118,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn {
     background: gold;
     color: black;
@@ -128,6 +141,7 @@ section {
     text-align: center;
 }
 
+/* SECTION TITLES */
 section h2 {
     color: gold;
     margin-bottom: 40px;
@@ -142,10 +156,10 @@ section h2 {
 .booking-box {
     max-width: 700px;
     margin: auto;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 35px;
     border-radius: 20px;
-    border: 1px solid rgba(255,215,0,0.3);
+    border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 /* SERVICE */
@@ -161,6 +175,14 @@ section h2 {
     font-size: 34px;
 }
 
+/* SUMMER SPECIAL */
+.special {
+    margin-top: 15px;
+    color: gold;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 /* GALLERY */
 .gallery-grid {
     display: grid;
@@ -170,31 +192,23 @@ section h2 {
     margin: auto;
 }
 
+/* GALLERY IMAGES */
 .gallery-grid img {
     width: 100%;
     height: 350px;
     object-fit: cover;
     border-radius: 20px;
-    border: 2px solid rgba(255,215,0,0.3);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    transition: 0.3s ease;
 }
 
-/* POLICIES */
-.policy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.gallery-grid img:hover {
+    transform: scale(1.02);
 }
 
-.policy-card {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,215,0,0.3);
-}
-
-.policy-card h3 {
-    color: gold;
-    margin-bottom: 15px;
+/* POLICY TEXT */
+.booking-box p {
+    margin-bottom: 10px;
 }
 
 /* FOOTER */
@@ -202,10 +216,10 @@ footer {
     background: black;
     text-align: center;
     padding: 25px;
-    border-top: 1px solid rgba(255,215,0,0.3);
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
     header {
@@ -241,4 +255,5 @@ footer {
     .hero-image img {
         width: 100%;
     }
+
 }
